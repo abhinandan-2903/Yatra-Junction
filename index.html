@@ -251,8 +251,28 @@ input,select,textarea{font-family:var(--font-body)}
 .stat-sub{font-size:0.76rem;color:var(--muted)}
 
 .support-box{max-width:700px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem}
-.support-options{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem}
-.support-option{background:rgba(8,15,24,0.5);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;cursor:pointer;transition:all .2s}
+/*.support-options{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem}*/
+.support-options{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+    margin-bottom:2rem;
+}
+/*.support-option{background:rgba(8,15,24,0.5);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center;cursor:pointer;transition:all .2s}*/
+.support-option{
+    background:rgba(8,15,24,0.5);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:1.5rem;
+    text-align:center;
+    cursor:pointer;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:220px;
+}
 .support-option:hover{border-color:var(--gold)}
 .so-icon{font-size:2rem;margin-bottom:.5rem;display:block}
 .so-title{font-weight:600;font-size:0.9rem}
@@ -418,7 +438,45 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:3rem 2r
 .nav-btn-reg{
     padding:7px 12px !important;
 }
+/* ===== Support Page Mobile ===== */
 
+.support-options{
+    grid-template-columns:1fr;
+    gap:1rem;
+}
+
+.support-option{
+    min-height:auto;
+    padding:1.5rem;
+}
+
+.support-box{
+    width:100%;
+    padding:1.2rem;
+}
+
+.chat-window{
+    height:260px;
+}
+
+.chat-input-row{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.chat-input-row input,
+.chat-input-row button{
+    width:100%;
+}
+
+.so-title{
+    font-size:1rem;
+}
+
+.so-desc{
+    font-size:.85rem;
+}
 }
 </style>
 </head>
